@@ -1,0 +1,6 @@
+<!-- length > 2 since start and end are always added to options -->
+<c-pagination *ngIf="pageOptions.length > 2">
+  <div cPageItem [disabled]="pageOption.disabled" [active]="pageOption.active" *ngFor="let pageOption of pageOptions">
+    <a cPageLink [routerLink] (click)="handleNavigation(pageOption)">{{ pageOption.text }}</a>
+  </div>
+</c-pagination>

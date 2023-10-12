@@ -1,0 +1,43 @@
+<m-layout>
+  <h3>Regular card</h3>
+  <m-card-with-title title="Regular Card">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+    expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+  </m-card-with-title>
+
+  <h3>Card with footer</h3>
+  <m-card-with-title title="Card with footer">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+    expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+
+    <div card-footer>
+      <button cButton color="primary" class="btn btn-primary">Test Button</button>
+    </div>
+  </m-card-with-title>
+
+  <h3>Pagination</h3>
+  <m-paginator [currentPage]="activePage" (pageChangeEvent)="handlePageChange($event)"></m-paginator>
+
+  Last changed to page: {{pageLastChangedTo}}
+
+
+  <h3>Grid</h3>
+  <m-grid>
+    <m-card-with-title title="Regular Card" class="mb-4">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+      expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+    </m-card-with-title>
+    <m-card-with-title title="Regular Card" class="mb-4">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+      expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+    </m-card-with-title>
+    <m-card-with-title title="Regular Card" class="mb-4">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+      expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+    </m-card-with-title>
+    <m-card-with-title title="Regular Card" class="mb-4">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+      expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+    </m-card-with-title>
+  </m-grid>
+</m-layout>

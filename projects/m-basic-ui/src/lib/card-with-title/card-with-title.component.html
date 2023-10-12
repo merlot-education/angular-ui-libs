@@ -1,0 +1,18 @@
+<c-row>
+  <c-col xs>
+    <c-card class="mb-4">
+      <c-card-header>{{title}}</c-card-header>
+
+      <c-card-body>
+        <ng-content></ng-content>
+      </c-card-body>
+
+      <c-card-footer [ngStyle]="{'display': !ref.children.length ? 'none' : 'block' }">
+        <div #ref>
+          <ng-content select="[card-footer]"></ng-content>
+        </div>
+      </c-card-footer>
+
+    </c-card>
+  </c-col>
+</c-row>
