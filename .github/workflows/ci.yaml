@@ -47,14 +47,14 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present m-basic-ui
       #      - run: npm test
-      - run: npm version --prefix ./dist/m-basic-ui
+      - run: npm version --prefix ./dist/m-basic-ui ${{ env.tag }}
       - run: npm publish ./dist/m-basic-ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - run: npm run build --if-present m-dashboard-ui
       #      - run: npm test
-      - run: npm version --prefix ./dist/m-dashboard-ui
+      - run: npm version --prefix ./dist/m-dashboard-ui ${{ env.tag }}
       - run: npm publish ./dist/m-dashboard-ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
