@@ -7,11 +7,10 @@ import {
   CardWithTitleComponent,
   PaginatorComponent,
   GridComponent,
-  NavHeaderComponent,
-  LayoutModule,
-} from '@m-basic-ui';
+} from 'm-basic-ui';
 import { AppRoutingModule } from './app.routing.module';
 import { DemoComponent } from './demo/demo.component';
+import { LayoutModule } from 'm-dashboard-ui';
 
 @NgModule({
   declarations: [AppComponent, DemoComponent],
@@ -19,10 +18,13 @@ import { DemoComponent } from './demo/demo.component';
     BrowserModule,
     AppRoutingModule,
 
+    // basic ui
     MBasicUiModule,
     CardWithTitleComponent,
     PaginatorComponent,
     GridComponent,
+
+    // dashboard ui
     LayoutModule,
   ],
   providers: [],

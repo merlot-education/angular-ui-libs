@@ -30,6 +30,7 @@ import {
   PerfectScrollbarModule,
 } from 'ngx-perfect-scrollbar';
 import { LayoutComponent } from './layout.component';
+
 import { NavHeaderComponent } from './nav-header/nav-header.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -37,10 +38,9 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 };
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [LayoutComponent, NavHeaderComponent],
   imports: [
     CommonModule,
-    NavHeaderComponent,
 
     PerfectScrollbarModule,
 

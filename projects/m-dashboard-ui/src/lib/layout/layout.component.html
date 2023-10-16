@@ -1,16 +1,17 @@
 <c-sidebar #sidebar="cSidebar" class="d-print-none sidebar sidebar-fixed" id="sidebar" visible>
   <c-sidebar-brand style="padding-top: 10px; padding-bottom: 10px" [brandFull]="{
-      src: 'assets/img/brand/MERLOT_Logo_RGB.png',
-      width: 130,
-      height: 42,
-      alt: 'Merlot Logo'
-    }" [brandNarrow]="{
-      src: 'assets/img/brand/MERLOT_Logo_RGB.nurLogo.png',
-      width: 46,
-      height: 46,
-      alt: 'Merlot Logo'
-    }" routerLink="./">
+            src: logoUrlWide,
+            width: 130,
+            height: 42,
+            alt: logoAltText
+          }" [brandNarrow]="{
+            src: logoUrlNarrow,
+            width: 46,
+            height: 46,
+            alt: logoAltText
+          }" routerLink="./">
   </c-sidebar-brand>
+
 
   <c-sidebar-header>
     <div *ngIf="authService.isLoggedIn === false; else loggedIn">
@@ -55,7 +56,8 @@
 
 
 <div class="wrapper d-flex flex-column min-vh-100 bg-light dark:bg-transparent">
-  <m-nav-header class="mb-4 d-print-none header header-sticky" position="sticky" sidebarId="sidebar"></m-nav-header>
+  <m-nav-header class="mb-4 d-print-none header header-sticky" position="sticky" sidebarId="sidebar"
+    [userAvatarUrl]="userAvatarUrl"></m-nav-header>
 
   <div class="body flex-grow-1 px-3">
     <c-container breakpoint="lg" class="h-auto">

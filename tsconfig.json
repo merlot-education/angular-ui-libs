@@ -4,16 +4,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@m-basic-ui": ["dist/m-basic-ui"],
-      "@m-dashboard-ui": [
-        "dist/m-dashboard-ui"
-      ],
-      "m-basic-ui": [
-        "dist/m-basic-ui"
-      ],
-      "test-library": [
-        "dist/test-library"
-      ]
+      "m-basic-ui": ["dist/m-basic-ui"],
+      "m-dashboard-ui": ["dist/m-dashboard-ui"]
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
