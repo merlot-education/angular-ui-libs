@@ -4,9 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import {
   MBasicUiModule,
-  CardWithTitleComponent,
   PaginatorComponent,
   GridComponent,
+  CardComponent,
 } from 'm-basic-ui';
 import { AppRoutingModule } from './app.routing.module';
 import { DemoComponent } from './demo/demo.component';
@@ -20,7 +20,7 @@ import { LayoutModule } from 'm-dashboard-ui';
 
     // basic ui
     MBasicUiModule,
-    CardWithTitleComponent,
+    CardComponent,
     PaginatorComponent,
     GridComponent,
 

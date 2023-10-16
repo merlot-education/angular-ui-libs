@@ -1,7 +1,7 @@
 <c-row>
   <c-col xs>
     <c-card class="mb-4">
-      <c-card-header>{{title}}</c-card-header>
+      <c-card-header *ngIf="title">{{title}}</c-card-header>
 
       <c-card-body>
         <ng-content></ng-content>

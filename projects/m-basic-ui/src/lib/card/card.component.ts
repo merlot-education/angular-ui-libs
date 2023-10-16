@@ -4,14 +4,14 @@ import { Component, Input } from '@angular/core';
 import { CardModule, GridModule } from '@coreui/angular';
 
 @Component({
-  selector: 'm-card-with-title',
-  templateUrl: './card-with-title.component.html',
-  styleUrls: ['./card-with-title.component.scss'],
+  selector: 'm-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss'],
   standalone: true,
   imports: [CommonModule, CardModule, GridModule],
 })
-export class CardWithTitleComponent {
-  @Input() title: string = 'Card Title (change with "title" input)';
+export class CardComponent {
+  @Input() title: string = '';
 
   hasContent(templateRef: any): boolean {
     const element: HTMLElement = templateRef.elementRef.nativeElement;
