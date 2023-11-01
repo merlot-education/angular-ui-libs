@@ -1,5 +1,15 @@
+@import '../../scss/variables_light';
+
 strong {
   display: inline-block;
   width: 180px;
   text-align: left;
+}
+
+.primary {
+  border-top: 5px solid $primary;
+}
+
+.secondary {
+  border-top: 5px solid $secondary;
 }
