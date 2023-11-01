@@ -15,18 +15,13 @@ export class LayoutComponent {
   @Input() public logoAltText: string = '';
   @Input() public userAvatarUrl: string = '';
 
+  @Input() public isLoggedIn: boolean = false;
+  @Input() public logIn: () => void = () => {};
+  @Input() public logOut: () => void = () => {};
+  @Input() public displayName: string = '';
+
   public perfectScrollbarConfig = {
     suppressScrollX: true,
-  };
-
-  authService = {
-    isLoggedIn: true,
-    logIn: () => {},
-    logOut: () => {},
-    userProfile: {
-      firstName: 'John',
-      lastName: 'Doe',
-    },
   };
 
   icons = freeSet;

@@ -14,10 +14,10 @@
 
 
   <c-sidebar-header>
-    <div *ngIf="authService.isLoggedIn === false; else loggedIn">
+    <div *ngIf="isLoggedIn === false; else loggedIn">
       <div style="padding: 10px" id="welcome-text">Willkommen, Besucher!</div>
       <div style="padding: 10px">
-        <button id="login-button" cButton color="primary" style="margin: 10px;" (click)="authService.logIn()">
+        <button id="login-button" cButton color="primary" style="margin: 10px;" (click)="logIn()">
           Login
         </button>
         <button id="register-button" cButton color="primary" style="margin: 10px;" routerLink="./registration">
@@ -28,8 +28,7 @@
 
     <ng-template #loggedIn>
       <div style="padding: 10px" id="welcome-text">
-        Willkommen, {{ authService.userProfile["firstName"] }}
-        {{ authService.userProfile["lastName"] }}!<br /><br />
+        Willkommen, {{ displayName }}!<br /><br />
         <b>Aktive Rolle:</b>
         <!-- <select (change)="selectedRoleChanged($event.target)" id="role-select" aria-label="Default select example"
           cSelect>
@@ -42,7 +41,7 @@
           </option>
         </select> -->
       </div>
-      <button id="logout-button" cButton color="primary" (click)="authService.logOut()">
+      <button id="logout-button" cButton color="primary" (click)="logOut()">
         Logout
       </button>
     </ng-template>
