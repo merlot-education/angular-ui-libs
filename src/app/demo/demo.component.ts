@@ -38,4 +38,8 @@ export class DemoComponent {
     console.log(`Changed page to: ${pageNumber}`);
     this.pageLastChangedTo = pageNumber;
   }
+
+  handleLogin() {
+    alert('login clicked');
+  }
 }

@@ -1,8 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { freeSet } from '@coreui/icons';
 import { IconSetService } from '@coreui/icons-angular';
 import { iconSubset } from './icons-subset';
+import { IRoleNavData, OrganizationRoleLayoutData } from './_nav';
 
 @Component({
   selector: 'm-layout',
@@ -16,9 +17,17 @@ export class LayoutComponent {
   @Input() public userAvatarUrl: string = '';
 
   @Input() public isLoggedIn: boolean = false;
-  @Input() public logIn: () => void = () => {};
-  @Input() public logOut: () => void = () => {};
   @Input() public displayName: string = '';
+
+  @Input() public navItems: IRoleNavData[] = [];
+
+  @Input() public organizationRoles: OrganizationRoleLayoutData[] = [];
+  @Input() public activeRole: string = '';
+
+  @Output() public loginClicked = new EventEmitter<void>();
+  @Output() public logoutClicked = new EventEmitter<void>();
+
+  @Output() public selectedRoleChanged = new EventEmitter<any>();
 
   public perfectScrollbarConfig = {
     suppressScrollX: true,
@@ -28,5 +37,10 @@ export class LayoutComponent {
 
   constructor(public iconSet: IconSetService) {
     this.iconSet.icons = iconSubset;
+  }
+
+  login() {
+    console.log('login clicked');
+    this.loginClicked.emit();
   }
 }

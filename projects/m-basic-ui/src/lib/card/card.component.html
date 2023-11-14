@@ -1,7 +1,7 @@
 <c-row>
   <c-col xs>
     <c-card class="mb-4" [class]="markAs">
-      <c-card-header *ngIf="title">{{title}}</c-card-header>
+      <c-card-header [class]="blueHeader ? 'blue' : ''" *ngIf="title" [innerHTML]="title"></c-card-header>
 
       <c-card-body>
         <ng-content></ng-content>

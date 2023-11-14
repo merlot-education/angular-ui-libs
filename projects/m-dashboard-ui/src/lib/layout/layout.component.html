@@ -17,7 +17,7 @@
     <div *ngIf="isLoggedIn === false; else loggedIn">
       <div style="padding: 10px" id="welcome-text">Willkommen, Besucher!</div>
       <div style="padding: 10px">
-        <button id="login-button" cButton color="primary" style="margin: 10px;" (click)="logIn()">
+        <button id="login-button" cButton color="primary" style="margin: 10px;" (click)="login()">
           Login
         </button>
         <button id="register-button" cButton color="primary" style="margin: 10px;" routerLink="./registration">
@@ -30,25 +30,25 @@
       <div style="padding: 10px" id="welcome-text">
         Willkommen, {{ displayName }}!<br /><br />
         <b>Aktive Rolle:</b>
-        <!-- <select (change)="selectedRoleChanged($event.target)" id="role-select" aria-label="Default select example"
+        <select (change)="selectedRoleChanged.emit($event)" id="role-select" aria-label="Default select example"
           cSelect>
-          <option class="text-center" *ngFor="let orgaRole of objectKeys(authService.organizationRoles)"
-            value="{{ orgaRole }}">
-            {{ authService.organizationRoles[orgaRole].roleFriendlyName }} für
+          <option class="text-center" *ngFor="let orgaRole of organizationRoles" [value]="orgaRole.orgaRoleString"
+            [selected]="this.activeRole == orgaRole.orgaRoleString">
+            {{ orgaRole.roleFriendlyName }} für
             {{
-            authService.organizationRoles[orgaRole].orgaData?.selfDescription.verifiableCredential.credentialSubject['merlot:orgaName']['@value']
+            orgaRole.orgaName
             }}
           </option>
-        </select> -->
+        </select>
       </div>
-      <button id="logout-button" cButton color="primary" (click)="logOut()">
+      <button id="logout-button" cButton color="primary" (click)="logoutClicked.emit()">
         Logout
       </button>
     </ng-template>
   </c-sidebar-header>
   <perfect-scrollbar [config]="perfectScrollbarConfig">
     <!--  [perfectScrollbar]="perfectScrollbarConfig"-->
-    <!-- <c-sidebar-nav [navItems]="navItems" dropdownMode="close"> </c-sidebar-nav> -->
+    <c-sidebar-nav [navItems]="navItems" dropdownMode="close"> </c-sidebar-nav>
   </perfect-scrollbar>
   <c-sidebar-toggler *ngIf="!sidebar.narrow" toggle="unfoldable" cSidebarToggle="sidebar"></c-sidebar-toggler>
 </c-sidebar>

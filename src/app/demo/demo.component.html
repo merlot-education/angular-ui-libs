@@ -1,13 +1,30 @@
 <m-layout logoUrlWide="/assets/MERLOT_Logo_RGB.png" logoUrlNarrow="/assets/MERLOT_Logo_RGB.nurLogo.png"
-  userAvatarUrl="/assets/default-user.png">
+  userAvatarUrl="/assets/default-user.png" (loginClicked)="handleLogin()">
   <h3>Regular card</h3>
   <m-card>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
     expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
   </m-card>
 
+  <h3>Marked cards</h3>
+  <m-card markAs="primary">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+    expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+  </m-card>
+
+  <m-card markAs="secondary">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+    expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+  </m-card>
+
   <h3>Regular card with title</h3>
-  <m-card title="Regular Card">
+  <m-card title="<b>Regular</b> Card">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
+    expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
+  </m-card>
+
+  <h3>Regular card with marked title</h3>
+  <m-card title="Regular Card" [blueHeader]="true">
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea eaque tempora harum, ipsum odio, vitae molestiae id
     expedita ipsa excepturi provident eius quaerat fugit sapiente distinctio commodi, ratione repellendus illo.
   </m-card>

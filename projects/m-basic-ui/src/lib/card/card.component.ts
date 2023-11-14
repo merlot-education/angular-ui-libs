@@ -13,6 +13,7 @@ import { CardModule, GridModule } from '@coreui/angular';
 export class CardComponent {
   @Input() title: string = '';
   @Input() markAs: string = ''; // primary | secondary (see component style file)
+  @Input() blueHeader: boolean = false; // primary | secondary (see component style file)
 
   hasContent(templateRef: any): boolean {
     const element: HTMLElement = templateRef.elementRef.nativeElement;
