@@ -32,6 +32,7 @@ import {
 import { LayoutComponent } from './layout.component';
 
 import { NavHeaderComponent } from './nav-header/nav-header.component';
+import { RouterModule } from '@angular/router';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -64,6 +65,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     UtilitiesModule,
 
     IconModule,
+
+    RouterModule,
   ],
   providers: [
     {
