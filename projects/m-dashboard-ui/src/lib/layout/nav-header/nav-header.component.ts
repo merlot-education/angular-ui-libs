@@ -10,7 +10,6 @@ import { IconSetService } from '@coreui/icons-angular';
 })
 export class NavHeaderComponent {
   @Input() sidebarId: string = 'sidebar';
-  @Input() public userAvatarUrl: string = '';
   authService = { isLoggedIn: true };
 
   constructor(public iconSet: IconSetService) {
