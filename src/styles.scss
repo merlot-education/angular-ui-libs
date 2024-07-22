@@ -41,3 +41,22 @@ $enable-rtl: true;
 
 // If you want to add something do it here
 @import "./scss/custom";
+
+@-webkit-keyframes roll {
+    from { -webkit-transform: rotate(0deg) }
+    to { -webkit-transform: rotate(360deg) }
+}
+
+@keyframes roll {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+}
+
+.easter-egg {
+    -webkit-animation-name: roll;
+    animation-name: roll;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
