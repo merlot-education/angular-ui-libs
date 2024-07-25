@@ -303,7 +303,6 @@ $variable-prefix:             cui-;
 //
 // The gradient which is added to components if `$enable-gradients` is `true`
 // This gradient is also added to elements with `.bg-gradient`
-// $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0));
 
 // Spacing
 //
@@ -379,9 +378,6 @@ $grid-breakpoints: (
 );
 // scss-docs-end grid-breakpoints
 
-// @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-// @include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
-
 
 // Grid containers
 //
@@ -397,7 +393,6 @@ $container-max-widths: (
 );
 // scss-docs-end container-max-widths
 
-// @include _assert-ascending($container-max-widths, "$container-max-widths");
 
 
 // Grid columns
@@ -472,8 +467,6 @@ $aspect-ratios: (
 
 $font-family-sans-serif:      "Arimo";//system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;// stylelint-enable value-keyword-case
-// $font-family-base:            var(--#{$variable-prefix}font-sans-serif);
-// $font-family-code:            var(--#{$variable-prefix}font-monospace);
 
 // $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $font-size-base effects the font size of the body text

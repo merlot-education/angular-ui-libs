@@ -42,7 +42,6 @@ export class PaginatorComponent {
 
   protected pageOptions!: IPageOption[];
 
-  constructor() {}
   ngOnInit(): void {
     this.currentPage.subscribe((newPage) => {
       console.log('newPage', newPage);
